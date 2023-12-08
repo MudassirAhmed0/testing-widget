@@ -38,5 +38,7 @@ const handleWidgetCircleClick = () => {
 };
 widgetCircle.addEventListener("click", handleWidgetCircleClick);
 
-body.appendChild(widgetModal);
-body.appendChild(widgetCircle);
+setTimeout(() => {
+  body.appendChild(widgetModal);
+  body.appendChild(widgetCircle);
+}, 1000);
