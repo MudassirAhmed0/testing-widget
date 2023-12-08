@@ -1,0 +1,36 @@
+.widget_circle {
+  background-color: red;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  position: fixed;
+  right: 3vw;
+  bottom: 3vw;
+  cursor: pointer;
+}
+
+.widget_modal {
+  background-color: red;
+  width: 15vw;
+  height: 20vw;
+  position: fixed;
+  right: 3vw;
+  bottom: 3vw;
+  border-radius: 1vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+  padding: 1vw;
+}
+.widget_modal svg {
+  width: 2.5vw;
+  fill: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+}
+
+.widget_modal.show {
+  opacity: 1;
+  pointer-events: initial;
+}
