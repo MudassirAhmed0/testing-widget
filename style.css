@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+}
 .widget_circle {
-  background-color: red;
+  box-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
+  background-color: #fff;
   width: 5vw;
   height: 5vw;
   border-radius: 50%;
@@ -8,11 +15,19 @@
   bottom: 3vw;
   cursor: pointer;
 }
+.chatIcon {
+  width: 3vw;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .widget_modal {
-  background-color: red;
-  width: 15vw;
-  height: 20vw;
+  background-color: rgb(60, 54, 54);
+  width: 25vw;
+  height: 35vw;
+  z-index: 55;
   position: fixed;
   right: 3vw;
   bottom: 3vw;
@@ -21,16 +36,106 @@
   pointer-events: none;
   transition: 0.5s all;
   padding: 1vw;
+  display: flex;
+  flex-direction: column;
 }
-.widget_modal svg {
-  width: 2.5vw;
-  fill: #fff;
-  cursor: pointer;
-  margin-left: auto;
-  display: block;
+.widget_header {
+  display: flex;
+  padding-bottom: 1vw;
+  border-bottom: 1px solid #ffffff4d;
+}
+.widget_header_img_circle {
+  width: 3vw;
+  height: 3vw;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.widget_header_titles {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3vw;
+  color: #fff;
+  margin-left: 1vw;
+}
+.widget_header_title {
+  font-size: 1.2vw;
+}
+.widget_header_title_status {
+  opacity: 0.5;
+  font-size: 0.9vw;
 }
 
 .widget_modal.show {
   opacity: 1;
   pointer-events: initial;
+}
+.widget_main {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  height: 26vw;
+  display: grid;
+  grid-template-rows: 1fr; /* Creates a single row that takes the entire height of the container */
+  align-items: end;
+  flex: 1;
+  overflow: scroll;
+}
+.chat_box {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 90%;
+  margin-bottom: 0.8vw;
+}
+.chat_box .chat_person {
+  opacity: 0.5;
+  font-size: 0.9vw;
+  margin-bottom: 0.2vw;
+}
+.chat_box .chat_message {
+  padding: 0.6vw;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+}
+.user_chat {
+  margin-left: auto;
+}
+.user_chat .chat_person {
+  text-align: right;
+}
+.user_chat .chat_message {
+  background: #608ae7;
+}
+.bot_chat .chat_message {
+  background: #fff;
+  color: #333;
+}
+
+.widget_message {
+  background-color: #fff;
+  width: 100%;
+  height: 3vw;
+  border-radius: 2vw;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+.widget_message textarea {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  padding: 1vw;
+  font-size: 1vw;
+  outline: none;
+  border: none;
+}
+.widget_message textarea::-webkit-scrollbar {
+  display: none;
+}
+.sendBtn {
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1vw;
 }
