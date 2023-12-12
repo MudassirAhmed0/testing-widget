@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="user_chat chat_box">
     <span class="chat_person">Visitor</span>
     <span class="chat_message"
-      >Hello, I want to fuck you what are the possiblities?</span
+      >Hello, I am ChatBot. How can I help you?</span
     >
   </div>
   <div class="bot_chat chat_box">
     <span class="chat_person">Bot</span>
     <span class="chat_message"
-      >Hello, I want to fuck you what are the possiblities?</span
+      >Hello, I am ChatBot. How can I help you?</span
     >
   </div>
 </div>
